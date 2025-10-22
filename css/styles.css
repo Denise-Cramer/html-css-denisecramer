@@ -142,3 +142,79 @@ h2 {
 body {
     font-size: 1rem;
 }
+/*---hero section---*/
+.leading {
+    font-size: clamp(11.05rem, 1.6vw, 1.25rem);
+    margin-bottom: var(--space-4);
+    color: var(--muted-ink);
+}
+.hero-grid {
+    display: grid;
+    gap: var(--space-4);
+    align-items: center;
+}
+@media (min-width: 768px) {
+    .hero-grid {
+        grid-template-columns: 1fr 1fr;
+        gap:var(--space-4)
+    }
+}
+.hero-copy h1 {margin: 0 0 var(--space-2) ;}
+.hero-copy p {margin: 0 0 var(--space-2) ;}
+
+.hero-media img {
+    border-radius: var(--radius);
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*ghost button variant*/
+.button.ghost {
+    background-color: transparent;
+    color: var(--brand);
+    border: 1px solid var(--brand);
+    margin-left: .5rem;
+}
+
+/*---features and brand promise sections---*/
+.section-title {
+    text-align: center;
+    margin-bottom: var(--space-4) 0 var(--space-2);
+}
+
+.feature-list {
+    --cols: 1;
+    display: grid;
+    grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+    gap: var(--space-3);
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--space-4);
+}
+@media (min-width: 600px) {
+    .feature-list {
+        --cols: 2;
+    }
+}
+@media (min-width: 1024px) {
+    .feature-list {
+        --cols: 3;
+    }
+}
+
+.feature {
+    text-align: center;
+    padding: var(--space-2);
+    background-color: var(--surface);
+    border-radius: var(--radius);
+    padding: var(--space-2);
+}
+.feature h3 {
+    margin-top: 0;
+    margin-bottom: var(--space-1);
+}
+.feature p {
+    margin: 0;
+    color: var(--muted-ink);
+}
