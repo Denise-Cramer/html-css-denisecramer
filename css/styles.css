@@ -276,6 +276,6 @@ body {
 }
 .price {
     font-weight: bold;
-    margin: .25rem 0 0;
-    color: var(--brand);
+    margin: 1rem 0 0;
+    color: #111;
 }
