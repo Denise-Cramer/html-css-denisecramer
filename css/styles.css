@@ -2,7 +2,7 @@
 *, *::before, *::after {
     box-sizing: border-box; }
 html {color-scheme: light dark;}
-body {margin: 0; font-family: system-ui, "segoe ui", serif, arial, sans-serif; line-height: 1.5; background-color: var(--ink); color: var(--bg);}
+body {margin: 0; font-family: system-ui, "segoe ui", serif, arial, sans-serif; line-height: 1.5; background-color: #0A3641; color: var(--bg);}
 img {max-width: 100%; height: auto; display: block;}
 a {color: var(--accent);}
 ul, ol {padding-left: 1.2rem; margin-top: 0; margin-bottom: 1rem;}
@@ -24,7 +24,7 @@ ul, ol {padding-left: 1.2rem; margin-top: 0; margin-bottom: 1rem;}
     --space-4:2rem;
     --space-5:3rem;
 
-    --radius: 12px
+    --radius: 12px;
     --max-width: 1200px;
     --gutter: 1rem;
 }
@@ -43,8 +43,7 @@ ul, ol {padding-left: 1.2rem; margin-top: 0; margin-bottom: 1rem;}
 header [role="banner"] {
     background-color: var(--bg);
     border-bottom: 1px solid var(--border);
-    padding-top: var(--space-2) 0;
-    padding-bottom: var(--space-2);
+    padding: var(--space-2) 0;
 }
 .header-inner {
     display: flex;
@@ -58,7 +57,7 @@ header [role="banner"] {
     text-decoration: none;
     color: var(--ink);
 }
-.nav [role="navigation"] ul {
+.nav {
     list-style: none;
     display: flex;
     gap: var(--space-2);
@@ -114,7 +113,7 @@ h2 {
     text-align: center;
 }
 .button:hover, .button:focus-visible {
-    background-color: darken(var(--brand), 10%);
+    filter: brightness(0.9);
     outline: 3px solid var(--accent);
     outline-offset: 2px;
 }
@@ -137,14 +136,14 @@ h2 {
 
 /*---specific content will go here later---*/
 @media (min-width:768px) {
-    .root { --gutter: 2rem;}
+    :root { --gutter: 2rem; }
     }
 body {
     font-size: 1rem;
 }
 /*---hero section---*/
-.leading {
-    font-size: clamp(11.05rem, 1.6vw, 1.25rem);
+.lead {
+    font-size: clamp(1.05rem, 1.6vw, 1.25rem);
     margin-bottom: var(--space-4);
     color: var(--muted-ink);
 }
@@ -180,7 +179,7 @@ body {
 /*---features and brand promise sections---*/
 .section-title {
     text-align: center;
-    margin-bottom: var(--space-4) 0 var(--space-2);
+    margin: var(--space-4) 0 var(--space-2);
 }
 
 .feature-list {
@@ -282,7 +281,7 @@ body {
 /*====products page:hero====*/
 .products-hero {
     text-align: left;
-    margin-bottom: var(--space-3) 0 var(--space-3);
+    margin: var(--space-3) 0 var(--space-3);
 }
 .products-hero h1 {
     margin: 0 0 .5rem;
@@ -355,4 +354,60 @@ body {
     font-weight: 700;
     margin: .25rem 0 0;
     color: #005bbb;
+}
+/*===hero, background image and centered content===*/
+.hero--bg {
+    /*responsive height*/
+    --hero-min-h: clamp(300px, 70vh, 720px);
+    position: relative;
+    min-height: var(--hero-min-h);
+
+    background-image: url('../assets/images/hero-1600.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #fff;
+}
+/*overlay to improve text contrast*/
+.hero--bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: linear-gradient(180deg, rgba(0, 0, 0, .45), rgba(0, 0, 0, .35) 40%, rgba(0, 0, 0, .45));
+}
+.hero_inner {
+    position: relative;
+    z-index: 1;
+    min-height: var(--hero-min-h);
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: var(--space-5) var(--gutter);
+}
+.hero_content {
+    max-width: 760px;
+    text-align: center;
+    display: grid;
+    gap: var(--space-2);
+}
+/*buttons on dark bg*/
+.button.button--ghost,
+.button.button--ghos {
+    background: transparent;
+    color: var(--brand-ink);
+    border: 1px solid var(--brand-ink);
+}
+.button + .button,
+button + .button {
+    margin-left: .5rem;
+}
+
+@media (min-width: 768px) {
+    .hero_content h1 {
+    font-size: clamp(2rem, 6vw, 3rem);
+    }
 }
