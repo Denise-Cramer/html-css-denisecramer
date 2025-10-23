@@ -347,12 +347,12 @@ body {
     border-radius: calc(var(--radius) - 4px);
 }
 .card-title {
-    font-size: clamp(1.05rem, 2vw,1.25rem);
+    font-size: clamp(1.1rem, 2vw,1.3rem);
     margin: var(--space-1) 0 0;
     line-height: 1.2;
 }
 .price {
-    font-weight: bold;
+    font-weight: 700;
     margin: .25rem 0 0;
-    color: #111;
+    color: #005bbb;
 }
