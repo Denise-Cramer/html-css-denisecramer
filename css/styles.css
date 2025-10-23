@@ -218,3 +218,64 @@ body {
     margin: 0;
     color: var(--muted-ink);
 }
+/*===products grid===*/
+.grid{
+    --cols: 1;
+    display: grid;
+    grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+    gap: var(--space-3);
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--space-4)
+}
+
+/*responsive columns*/
+@media (min-width: 600px) {
+    .grid {
+        --cols: 2;
+    }
+}
+@media (min-width: 1024px) {
+    .grid {
+        --cols: 3;
+    }
+}
+
+.card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.card:hover, .card:focus-within {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+}
+
+.card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: var(--space-2);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: calc(var(--radius) - 4px);
+}
+
+.card-title {
+    font-size: clamp(1.1rem, 2vw,1.3rem);
+    margin: var(--space-1) 0 0;
+}
+.price {
+    font-weight: bold;
+    margin: .25rem 0 0;
+    color: var(--brand);
+}
