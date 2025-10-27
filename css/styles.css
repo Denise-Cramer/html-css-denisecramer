@@ -356,10 +356,7 @@ body {
     }
 /*overlay to improve text contrast*/
 .hero--bg::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(0, 0, 0, .45), rgba(0, 0, 0, .35) 40%, rgba(0, 0, 0, .45));
+    content: "none";
 }
 .hero__inner {
     position: relative;
