@@ -471,12 +471,12 @@ button + .button {
     border-radius: var(--radius);
     font: inherit;
     background: #3b6958;
-    color: #ffffff;
+    color: var(--ink);
 }
 .form-field input[type="email"]:focus {
     outline: none;
     box-shadow: 0 0 0 3px rgba(0, 91, 187, .35); /*accent color with transparency*/
-    border-color: #0E6A47;
+    border-color: #3b6958;
 }
 .help {
     color: var(--muted-ink);
