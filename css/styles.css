@@ -393,3 +393,39 @@ button + .button {
     font-size: clamp(2rem, 6vw, 3rem);
     }
 }
+
+/* Home: categories section */
+.home-categories {
+    margin: var(--space-5) 0;}
+.categories .card img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+.category .card-title {
+   text-align: center;
+   margin-top: var(--space-1);
+}
+
+/*Home: About us (Learn more) section*/
+.home-about {
+    margin: var(--space-5) 0;}
+    .about-grid {
+    display: grid;
+    gap: var(--space-3);
+    align-items: center;
+}
+@media (min-width: 900px) {
+    .about-grid {
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: var(--space-4);
+    }
+}
+.about-media img {
+    border-radius: var(--radius);
+}
+
+/*ghost button on light bg*/
+.home-about .button.button--ghost {
+    color: var(--brand);
+    border-color: var(--brand);
+}
