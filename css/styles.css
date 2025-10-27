@@ -356,7 +356,7 @@ body {
     }
 /*overlay to improve text contrast*/
 .hero--bg::before {
-    content: "none";
+    content: "";
 }
 .hero__inner {
     position: relative;
