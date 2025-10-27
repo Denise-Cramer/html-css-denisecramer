@@ -55,8 +55,7 @@ ul, ol {padding-left: 1.2rem; margin-top: 0; margin-bottom: 1rem;}
     }
 
     /*ghost outline for light sections*/
-    .button.button--ghost {
-        background-color: transparent;
+    .home-about .button.button--ghost {
         color: var(--brand); /*teal on white*/
         border: 1px solid var(--brand);
     }
