@@ -83,3 +83,35 @@
     </div>
 </section>
     <!--end of About Us (Learn more)-->
+<!--Newsletter section-->
+<section class="newsletter" aria-labelledby="newsletter-title">
+    <div class="container newsletter__inner">
+        <h2 id="newsletter-title" class="section-title">Join our newsletter.</h2>
+        <p class="lead">Get 10% off on your first order.</p>
+
+        <form class="newsletter__form" action="confirmation.html" method="get">
+            <div class="form-field">
+            <label for="newsletter-email" class="visually-hidden">Email address</label>
+            <input
+            id="newsletter-email"
+            name="email"
+            type="email"
+            inputmode="email"
+            autocomplete="email"
+            placeholder="you@example.com"
+            required
+            aria-describedby="newsletter-help">
+            <small id="newsletter-help" class="help"></small>
+            </div>
+
+            <button class="button button--cta" type="submit">Subscribe</button>
+        </form>
+    </div>
+</section>
+    <!--end of Newsletter section-->
+
+    <footer role="contentinfo">
+        <div class="container footer-inner">
+            <p>&copy; Rainy Days</p>
+        </div>
+    </footer>
