@@ -470,7 +470,7 @@ button + .button {
     border: 1px solid var(--border);
     border-radius: var(--radius);
     font: inherit;
-    background: #3b6958;
+    background: #ffffff;
     color: var(--ink);
 }
 .form-field input[type="email"]:focus {
