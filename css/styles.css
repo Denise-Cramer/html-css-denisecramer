@@ -42,7 +42,7 @@ ul, ol {padding-left: 1.2rem; margin-top: 0; margin-bottom: 1rem;}
     --space-4:2rem;
     --space-5:3rem;
 }
-    /*primary call-to-action color*/
+    /*primary cta color*/
     .button.button--cta {
         background: var(--cta);
         color: #ffffff;
