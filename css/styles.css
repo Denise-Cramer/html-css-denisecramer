@@ -189,9 +189,8 @@ body {
 /*ghost button variant*/
 .button.button--ghost {
     background-color: transparent;
-    color: var(--brand);
-    border: 1px solid var(--brand);
-    margin-left: .5rem;
+    color: var(--brand-ink);
+    border: 1px solid var(--brand-ink);
 }
 
 /*---features and brand promise sections---*/
@@ -236,17 +235,6 @@ body {
     color: var(--muted-ink);
 }
 
-/*responsive columns*/
-@media (min-width: 600px) {
-    .grid {
-        --cols: 2;
-    }
-}
-@media (min-width: 1024px) {
-    .grid {
-        --cols: 3;
-    }
-}
 /*====products page:hero====*/
 .products-hero {
     text-align: left;
@@ -322,7 +310,7 @@ body {
 .price {
     font-weight: 700;
     margin: .25rem 0 0;
-    color: #005bbb;
+    color: var(--accent);
 }
 /*===hero, background image and centered content===*/
 .hero--bg {
@@ -330,7 +318,6 @@ body {
     --hero-min-h: clamp(300px, 70vh, 720px);
     position: relative;
     min-height: var(--hero-min-h);
-
     background-image: url('../assets/images/hero-1600.jpg');
     background-size: cover;
     background-position: center;
