@@ -9,24 +9,36 @@ ul, ol {padding-left: 1.2rem; margin-top: 0; margin-bottom: 1rem;}
 
 /*---tokens will be replaced with figma variables---*/
 :root {
-    --brand: #0a5;      /*primary brand color*/
-    --brand-ink: #fff;  /*text on brand color on dark bg*/
-    --ink: #111;        /*body text*/
-    --muted-ink: #555;  /*secondary text*/
-    --bg: #fff;         /*page background*/
-    --surface: #f6f6f6;   /*cards, sections*/
-    --border: #e6e6e6;  /*hairlines. borders*/
-    --accent: #005bbb;     /*links, accents*/
+    /*brand colors and design tokens*/
+    --brand: #0a3641;      /*primary brand color*/
+    --BRAND-HOVER: #072833; /*darker brand color for hover states*/
+    --brand-ink: #ffffff;  /*text on brand color on dark bg*/
 
+    /*page & typography colors*/
+    --bg: #ffffff;         /*page background color*/
+    --ink: #111111;        /*main text color*/
+    --muted-ink: #555555;  /*muted text color*/
+
+    /*UI surface colors*/
+    --surface: #f6f6f6;    /*surface color for cards, sections*/
+    --border: #e6e6e6;     /*borders and dividers*/
+    --accent: #005bbb;     /*accent color for links, focus outlines*/
+
+    /*Header/footer bg colors*/
+    --header-bg: #0a3641;  /*header background color*/
+    --footer-bg: #0a3641;  /*footer background color*/
+
+    /*Layout and spacing*/
+    --radius:12px;        /*border radius for cards, buttons*/
+    --max-width:1200px;   /*max width for centered containers*/
+    --gutter:1rem;        /*horizontal padding for containers*/
+
+    /*spacing scale*/
     --space-1:.5rem;
     --space-2:1rem;
     --space-3:1.5rem;
     --space-4:2rem;
     --space-5:3rem;
-
-    --radius: 12px;
-    --max-width: 1200px;
-    --gutter: 1rem;
 }
 
 /*---layout helpers---*/
@@ -40,9 +52,10 @@ ul, ol {padding-left: 1.2rem; margin-top: 0; margin-bottom: 1rem;}
 }
 
 /*---header and nav---*/
-header [role="banner"] {
-    background-color: var(--bg);
-    border-bottom: 1px solid var(--border);
+header[role="banner"] {
+    background-color: var(--header-bg);
+    color: var(--brand-ink);
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
     padding: var(--space-2) 0;
 }
 .header-inner {
@@ -55,7 +68,7 @@ header [role="banner"] {
     font-weight: bold;
     font-size: 1.5rem;
     text-decoration: none;
-    color: var(--ink);
+    color: var(--brand-ink);
 }
 .nav {
     list-style: none;
@@ -66,15 +79,15 @@ header [role="banner"] {
 }
 .nav a {
     text-decoration: none;
-    color: var(--ink);
+    color: var(--brand-ink);
     padding: .25rem .5rem;
     border-radius: 6px;
     font-weight: 500;
 }
 .nav a:hover, .nav a:focus-visible {
-    outline: 2px solid var(--accent);
+    outline: 2px solid var(--brand-ink);
     outline-offset: 2px;
-    background-color: var(--surface);
+    background-color: rgba(255, 255, 255, .08);
 }
 
 /*---main and footer---*/
@@ -82,11 +95,11 @@ main {
     padding: var(--space-3) 0;
 }
 footer {
-    background-color: var(--bg);
-    border-top: 1px solid var(--border);
+    background-color: var(--footer-bg);
+    color: var(--brand-ink);
+    border-top: 1px solid rgba(255, 255, 255, .08);
     padding: var(--space-3) 0;
-    font-size: 0.9rem;
-    color: var(--muted-ink);
+    font-size: 0.95rem;
 }
 
 /*---headings---*/
@@ -110,10 +123,11 @@ h2 {
     padding: .5rem 1rem;
     border-radius: var(--radius);
     font-weight: bold;
+    border: 0;
     text-align: center;
 }
 .button:hover, .button:focus-visible {
-    filter: brightness(0.9);
+    background: var(--BRAND-HOVER);
     outline: 3px solid var(--accent);
     outline-offset: 2px;
 }
@@ -139,6 +153,11 @@ h2 {
     :root { --gutter: 2rem; }
     }
 body {
+    margin: 0;
+    font-family: system-ui, "segoe ui", system-ui, serif, arial, sans-serif;
+    line-height: 1.5;
+    background-color: var(--bg);
+    color: var(--ink);
     font-size: 1rem;
 }
 /*---hero section---*/
@@ -363,21 +382,23 @@ body {
     min-height: var(--hero-min-h);
 
     background-image: url('../assets/images/hero-1600.jpg');
+    @media (min-width: 1200px) {
+        background-image: url('../assets/images/hero-1900.jpg');
+    }
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
-    color: #fff;
 }
 /*overlay to improve text contrast*/
 .hero--bg::before {
     content: "";
     position: absolute;
+    inset: 0;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: linear-gradient(180deg, rgba(0, 0, 0, .45), rgba(0, 0, 0, .35) 40%, rgba(0, 0, 0, .45));
+    background: linear-gradient(180deg, rgba(0, 0, 0, .45), rgba(0, 0, 0, .35) 40%, rgba(0, 0, 0, .45));
 }
 .hero_inner {
     position: relative;
@@ -395,8 +416,7 @@ body {
     gap: var(--space-2);
 }
 /*buttons on dark bg*/
-.button.button--ghost,
-.button.button--ghos {
+.button.button--ghost {
     background: transparent;
     color: var(--brand-ink);
     border: 1px solid var(--brand-ink);
