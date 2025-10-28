@@ -492,13 +492,13 @@ button + .button {
 }
 /*ghost outline for submit button*/
     .newsletter .button {
-        background: transparent;
-        color: var(--brand);    /*teal text*/
+        background: #072833; /*figma bg*/
+        color: #ffffff;    /*white text*/
         border: 1px solid var(--brand); /*teal border*/
     }
 
     .newsletter .button:hover, .newsletter .button:focus-visible {
-        background: rgba(10, 54, 65, 0.06); /*light teal bg on hover*/
+        background: #0E6A47; /*figma bg on hover*/
         border: 3px solid var(--accent);  /*accent outline*/
         outline-offset: 2px;
     }
