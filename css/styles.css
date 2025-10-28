@@ -356,7 +356,7 @@ body {
     }
 /*overlay to improve text contrast*/
 .hero--bg::before {
-    content: "";
+    content: "none";
 }
 .hero__inner {
     position: relative;
@@ -490,7 +490,32 @@ button + .button {
 .form-field input[type="email"]:invalid:not(:placeholder-shown) {
     border-color: #d93025; 
 }
+/*align input and button on desktop*/
+@media (min-width: 720px) {
+    /*same height*/
+    :root { --control-h: 48px; }
 
+    .newsletter__form {
+        grid-template-columns: 1fr auto;
+        align-items: end;           /*bottom align*/
+        gap: var(--space-2);
+    }
+    /*email input*/
+    .newsletter .form-field input[type="email"] {
+        height: var(--control-h);
+        padding: 0 1rem;
+    }
+    /*submit button*/
+    .newsletter__form .button, .newsletter__form button {
+        align-self: end;          /*bottom align*/
+        height: var(--control-h);
+        padding: 0 1rem;         /*match input padding*/
+        display: inline-flex;
+        align-items: center;    /*vertical center*/
+        justify-content: center; /*horizontal center*/
+        white-space: nowrap;  /*prevent wrapping*/
+    }
+}
 /*=== End of newsletter section===*/
 
 /*=== Popular products section ===*/
