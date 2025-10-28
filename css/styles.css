@@ -504,21 +504,20 @@ button + .button {
 
     /*email input grows*/
     .newsletter .form-field {
-        flex: 1;
+        flex: 1 1 auto;
         position: relative;
         margin: 0;
         padding: 0 0 1.1rem; /*space for help text*/
     }
     .newsletter .form-field input[type="email"] {
         height: var(--control-h); /*fixed height*/
-        padding: 0 1rem;                /*vertical is 0 when height set*/
+        padding: 0 1rem;          /*vertical is 0 when height set*/
     }
     .newsletter .form-field .help {
         position: absolute;
         left: 0;
         top: calc(100% + 4px);
         right: 0;
-        text-align: left;
         font-size: 0.9rem;
         line-height: 1.2;
     }
