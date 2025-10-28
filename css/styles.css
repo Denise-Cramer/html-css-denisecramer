@@ -497,6 +497,85 @@ button + .button {
 .home-products {
     margin: var(--space-5) 0;
 }
+
+/*mobile/tablet:normal cards*/
+.product .card-link {
+    padding: var(--space-2);
+}
+.product img {
+    width: 100%;
+    aspect-ratio: 1 / 1;    /* square images */
+    object-fit: cover;
+    border-radius: calc(var(--radius) - 4px);
+}
+.add-to-cart {
+    display: grid;
+    grid-template-columns: 1fr auto; /* grow and hug */
+    gap: var(--space-2);
+    align-items: end;
+    margin-top: var(--space-2);
+}
+/*helper class for off-screen labels for accessibility*/
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+}
+/*desktop: wide layout with 5 columns*/
+@media (min-width: 1200px) {
+    .home-products{
+        height: 647px;
+        margin: 0;
+        padding-block: var(--space-4);
+        overflow: hidden;
+    }
+}
+.home-products .grid.products{
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--space-2);
+    align-items: start;
+}
+
+.product .card-link {
+    padding: var(--space-1);
+}
+/*smaller image box on desktop*/
+.product img {
+    width: 100%;
+    height: 140px;
+    aspect-ratio: auto;
+    object-fit: cover;
+    border-radius: calc(var(--radius) - 6px);
+}
+
+.product .card-title {
+    font-size: .95rem;
+    margin: .5rem 0 0;
+    line-height: 1.2;
+}
+/*stack select and button*/
+.add-to-cart {
+    grid-template-columns: 1fr;
+    gap: .5rem;
+    margin-top: .5rem;
+    padding: 0 var(--space-1) var(--space-1);
+}
+.add-to-cart select {
+    padding: .5rem .6rem;
+    font-size: .95rem;
+    border-radius: var(--radius);
+}
+.add-to-cart button {
+    padding: .5rem .6rem;
+    font-size: .95rem;
+}
 /* grids to clean the look */
 .product .card-link {
     padding: var(--space-2);
