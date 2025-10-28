@@ -490,6 +490,18 @@ button + .button {
 .form-field input[type="email"]:invalid:not(:placeholder-shown) {
     border-color: #d93025; 
 }
+/*ghost outline for submit button*/
+    .newsletter .button {
+        background: transparent;
+        color: var(--brand);    /*teal text*/
+        border: 1px solid var(--brand); /*teal border*/
+    }
+
+    .newsletter .button:hover, .newsletter .button:focus-visible {
+        background: rgba(10, 54, 65, 0.06); /*light teal bg on hover*/
+        border: 3px solid var(--accent);  /*accent outline*/
+        outline-offset: 2px;
+    }
 /*align input and button on desktop*/
 @media (min-width: 720px) {
     /*same height*/
