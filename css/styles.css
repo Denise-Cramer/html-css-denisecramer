@@ -528,6 +528,48 @@ button + .button {
         white-space: nowrap;  /*prevent wrapping*/
     }
 }
+/*fix alignment issue with input and button*/
+@media (min-width: 720px) {
+    :root { --control-h: 48px;  }
+}
+
+.newsletter__form {
+    grid-template-columns: 1fr auto; /*input grows, button hugs*/
+    align-items: end;           /*bottom align*/
+    gap: var(--space-2);
+}
+
+/*input defines height*/
+.newsletter .form-field {
+    position: relative;
+    padding-bottom: 1.1rem; /*space for help text*/
+}
+
+.newsletter .form-field input[type="email"] {
+    height: var(--control-h);
+    padding: 0 1rem;
+}
+
+/*remove help text overlap*/
+.newsletter .form-field .help {
+    position: absolute;
+    top: calc(100% + 4px);  /*under the input*/
+    bottom: 0;
+    left: 0;
+    font-size: 0.9rem;
+    line-height: 1.2;
+}
+
+/*match button height and padding*/
+.newsletter__form .button, .newsletter__form button {
+    align-self: end;          /*bottom align*/
+    height: var(--control-h);
+    padding: 0 1rem;         /*match input padding*/
+    display: inline-flex;
+    align-items: center;    /*vertical center*/
+    justify-content: center; /*horizontal center*/
+    white-space: nowrap;  /*prevent wrapping*/
+}
 /*=== End of newsletter section===*/
 
 /*=== Popular products section ===*/
