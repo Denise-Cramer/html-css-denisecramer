@@ -356,7 +356,7 @@ body {
     }
 /*overlay to improve text contrast*/
 .hero--bg::before {
-    content: "none";
+    content: none;
 }
 .hero__inner {
     position: relative;
@@ -428,12 +428,12 @@ button + .button {
 
 /*=== Newsletter section===*/
 .newsletter {
-    background: var(--surface);
-    margin: var(--space-5) 0;
-    padding: var(--space-5) 0;
+    background-color: var(--surface);
+    padding: var(--space-5);
+    text-align: center;
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
-    text-align: center;
+    margin: var(--space-5) 0;
 }
 .newsletter__inner {
     margin-inline: auto;
@@ -445,21 +445,14 @@ button + .button {
     margin: 0 0 var(--space-2);
 }
 
-/*---Form layout---*/
+/*form layout - mobile stacked*/
 .newsletter__form {
     display: grid;
     gap: var(--space-2);
 }
-@media (min-width: 720px) {
-    .newsletter__form {
-        grid-template-columns: 1fr auto;
-        align-items: end;
-        gap: var(--space-2);
-    }
-}
 
-/*field and inputs*/
-.form-field {
+/*field and input base styles*/
+.form-field { 
     display: grid;
     gap: .5rem;
 }
@@ -479,96 +472,67 @@ button + .button {
 }
 .form-field input[type="email"]:focus {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(0, 91, 187, .35); /*accent color with transparency*/
+    box-shadow: 0 0 0 3px rgba(0, 91, 187, 0.35);
     border-color: var(--accent);
 }
 .help {
     color: var(--muted-ink);
     font-size: 0.9rem;
 }
-/*--Validation hints--*/
-.form-field input[type="email"]:invalid:not(:placeholder-shown) {
-    border-color: #d93025; 
-}
 /*ghost outline for submit button*/
-    .newsletter .button {
-        background: #072833; /*figma bg*/
-        color: #ffffff;    /*white text*/
-        border: 1px solid var(--brand); /*teal border*/
-    }
+.newsletter .button {
+    background: transparent;
+    color: var(--brand);
+    border: 1px solid var(--brand);
+}
+.newsletter .button:hover, .newsletter .button:focus-visible {
+    background: rgba(10, 54, 65, 0.06);
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+}
 
-    .newsletter .button:hover, .newsletter .button:focus-visible {
-        background: #0E6A47; /*figma bg on hover*/
-        border: 3px solid var(--accent);  /*accent outline*/
-        outline-offset: 2px;
-    }
-/*align input and button on desktop*/
+/*desktop align input and button*/
 @media (min-width: 720px) {
-    /*same height*/
-    :root { --control-h: 48px; }
+    :root { --control-height: 48px; }
 
+    /*flex so they line up*/
     .newsletter__form {
-        grid-template-columns: 1fr auto;
-        align-items: end;           /*bottom align*/
+        display: flex;
+        align-items: stretch;   /*same height*/
         gap: var(--space-2);
     }
-    /*email input*/
+
+    /*email input grows*/
+    .newsletter .form-field {
+        flex: 1;
+        position: relative;
+        margin: 0;
+        padding: 0 0 1.1rem; /*space for help text*/
+    }
     .newsletter .form-field input[type="email"] {
+        height: var(--control-h); /*fixed height*/
+        padding: 0 1rem;                /*vertical is 0 when height set*/
+    }
+    .newsletter .form-field .help {
+        position: absolute;
+        left: 0;
+        top: calc(100% + 4px);
+        right: 0;
+        text-align: left;
+        font-size: 0.9rem;
+        line-height: 1.2;
+    }
+
+    /*subscribe button hugs its content*/
+    .newsletter__form .button, .newsletter__form button {
         height: var(--control-h);
         padding: 0 1rem;
-    }
-    /*submit button*/
-    .newsletter__form .button, .newsletter__form button {
-        align-self: end;          /*bottom align*/
-        height: var(--control-h);
-        padding: 0 1rem;         /*match input padding*/
         display: inline-flex;
-        align-items: center;    /*vertical center*/
-        justify-content: center; /*horizontal center*/
-        white-space: nowrap;  /*prevent wrapping*/
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+        align-self: flex-end;   /*align to bottom of input*/
     }
-}
-/*fix alignment issue with input and button*/
-@media (min-width: 720px) {
-    :root { --control-h: 48px;  }
-}
-
-.newsletter__form {
-    grid-template-columns: 1fr auto; /*input grows, button hugs*/
-    align-items: end;           /*bottom align*/
-    gap: var(--space-2);
-}
-
-/*input defines height*/
-.newsletter .form-field {
-    position: relative;
-    padding-bottom: 1.1rem; /*space for help text*/
-}
-
-.newsletter .form-field input[type="email"] {
-    height: var(--control-h);
-    padding: 0 1rem;
-}
-
-/*remove help text overlap*/
-.newsletter .form-field .help {
-    position: absolute;
-    top: calc(100% + 4px);  /*under the input*/
-    bottom: 0;
-    left: 0;
-    font-size: 0.9rem;
-    line-height: 1.2;
-}
-
-/*match button height and padding*/
-.newsletter__form .button, .newsletter__form button {
-    align-self: end;          /*bottom align*/
-    height: var(--control-h);
-    padding: 0 1rem;         /*match input padding*/
-    display: inline-flex;
-    align-items: center;    /*vertical center*/
-    justify-content: center; /*horizontal center*/
-    white-space: nowrap;  /*prevent wrapping*/
 }
 /*=== End of newsletter section===*/
 
