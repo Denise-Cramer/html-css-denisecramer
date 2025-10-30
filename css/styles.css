@@ -224,6 +224,15 @@ body {
     text-align: center;
     margin: var(--space-4) 0 var(--space-2);
 }
+/*customer reviews aligned to the left*/
+#details-title {
+    text-align: left;
+    margin: 0;
+}
+#reviews-title {
+    text-align: left;
+    margin: 0;
+}
 
 .feature-list {
     --cols: 1;
