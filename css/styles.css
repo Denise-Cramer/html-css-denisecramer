@@ -705,3 +705,30 @@ button + .button {
     font-size: .95rem;
 }
 /*=== End of popular products section ===*/
+
+/*Subscribe button alignment fix in newsletter section*/
+.newsletter__form{ 
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+.newsletter .form-field {
+    flex: 1 1 auto;
+    margin: 0;
+}
+.newsletter .form-field .help {
+    display: none;
+}
+.newsletter .form-field input[type="email"] {
+    height: 48px;
+    padding: 0 16px;
+}
+.newsletter__form .button{ 
+    height: 48px;
+    padding: 0 16px;
+}
+
+/*remove overlay box in hero bg*/
+.hero--bg::before {
+    content: none;
+}
