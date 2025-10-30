@@ -22,10 +22,158 @@
             </nav>
         </div> 
     </header> 
+<!--HERO-->
+<section class="cart-hero">
+    <div class="container hero-wrap">
+        <h1 class="cart-hero__title">My shopping cart</h1>
+    </div>
+</section>
 
 <main id="main" class="container">
-    <h1>My shopping cart</h1>
-    <!--specific content will go here later-->
+    <!--cart layout-->
+    <section class="cart">
+        <div class="cart-layout">
+            <!--items-->
+            <div class="cart-items" aria-labelledby="cart-items-title">
+                <h2 id="cart-items-title" class="visually-hidden">Products</h2>
+
+                <!--column labels-->
+                <div class="cart-head" aria-hidden="true">
+                    <span class="col col-product">Product</span>
+                    <span class="col col-size">Size</span>
+                    <span class="col col-qty">Quantity</span>
+                    <span class="col col-price">Price</span>
+                    <span class="col col-remove">Remove</span>
+                </div>
+                <ul class="cart-list">
+                    <!--first item-->
+                    <li class="cart-item">
+                        <div class="cart-product">
+                            <img
+                            src="assets/images/red-jacket-women.jpg"
+                            alt="Slim fit red rainjacket for women"
+                            width="160"
+                            height="160"
+                            loading="lazy">
+                            <div class="cart-product__info">
+                                <a class="cart-product__title" href="product.html">Red jacket women</a>
+                                <p class="cart-product__sku">SKU: RJ-W-RED-01</p>
+                            </div>
+                        </div>
+
+                        <div class="cart-size">
+                            <label for="ca1-size" class="visually-hidden">Size</label>
+                            <select id="ca1-size" name="size">
+                                <option>S</option>
+                                <option selected>M</option>
+                                <option>L</option>
+                            </select>
+                        </div>
+
+                        <div class="cart-qty">
+                            <label for="ca1-qty" class="visually-hidden">Quantity</label>
+                            <select id="ca1-qty" name="qty">
+                                <option selected>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </div>
+
+                        <div class="cart-price">
+                            <span class="price">2 890 SEK</span>
+                        </div>
+
+                        <div class="cart-remove">
+                            <a class="remove-link" href="product.html">Remove</a>
+                        </div>
+                    </li>
+
+                    <!--item 2-->
+                    <li class="cart-item">
+                        <div class="cart-product">
+                            <img
+                            src="assets/images/grey-jacket-men.jpg"
+                            alt="Grey slim fit rainjacket for men"
+                            width="160"
+                            height="160"
+                            loading="lazy">
+                            <div class="cart-product__info">
+                                <a class="cart-product__title" href="product.html">Grey jacket men</a>
+                                <p class="cart-product__sku">SKU: RJ-M-GREY-02></p>
+                            </div>
+                        </div>
+
+                        <div class="cart-size">
+                            <label for="ci2-size" class="visually-hidden">Size</label>
+                            <select id="ci2-size" name="size">
+                                <option selected>M</option>
+                                <option>S</option>
+                                <option>L</option>
+                            </select>
+                        </div>
+
+                        <div class="cart-price">
+                            <span class="price">2 390 SEK</span>
+                        </div>
+
+                        <div class="cart-remove">
+                            <a class="remove-link" href="products.html">Remove</a>
+                        </div>
+                    </li>
+
+                    <!--item 3-->
+                    <li class="cart-item">
+                        <div class="cart-product">
+                            <img
+                            src="assets/images/green-jacket-men.jpg"
+                            alt="Green slim fit rainjacket for men"
+                            width="160"
+                            height="160"
+                            loading="lazy">
+                            <div class="cart-product__info">
+                                <a class="cart-product__title" href="product.html">Green jacket men</a>
+                                <p class="cart-product__sku">SKU: RJ-M-GREEN-03></p>
+                            </div>
+                        </div>
+
+                        <div class="cart-size">
+                            <label for="ci3-size" class="visually-hidden">Size</label>
+                            <select id="ci3-size" name="size">
+                                <option selected>L</option>
+                                <option>S</option>
+                                <option>M</option>
+                            </select>
+                        </div>
+
+                        <div class="cart-price">
+                            <span class="price">1 990 SEK</span>
+                        </div>
+
+                        <div class="cart-remove">
+                            <a class="remove-link" href="products.html">Remove</a>
+                        </div>
+                    </li>
+                </ul>
+
+            <p class="cart-continue">
+                <a class="button button--ghost" href="products.html">Continue shopping</a>
+            </p>
+            </div>  
+
+            <!--summary-->
+            <aside class="cart-summary" aria-labelledby="summary-title">
+                <h2 id="summary-title" class="section-title">Summary</h2>
+                <dl class="totals">
+                    <div class="row">
+                        <dt>Subtotal</dt>
+                        <dd>7 270 SEK</dd>
+                    </div>
+                </dl>
+                <a class="button button--cta cart-checkout" href="payment.html">Proceed to checkout</a>
+                
+            </aside>
+        </div>
+    </section>
     </main>
     <footer role="contentinfo">
         <div class="container footer-inner">
