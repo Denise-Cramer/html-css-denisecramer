@@ -827,11 +827,12 @@ button + .button {
 .product-hero {
     /*full width, fixed height*/
     min-height: 500px;
+    background: var(--bg);
     display: grid;
     align-items: left;
 }
 .product-hero::before {
-    content: "";
+    content: none;
     position: absolute;
     inset: 0;
     background: #ffffff;
@@ -842,7 +843,7 @@ button + .button {
 }
 .product-hero__title {
     margin: 0;
-    color: #ffffff;
+    color: var(--ink);
     text-transform: uppercase;
     line-height: 1.05;
     letter-spacing: 0.02em;
@@ -903,7 +904,7 @@ button + .button {
     height: 2.5rem;
     padding: 0 .75rem;
     border-radius: var(--radius);
-    border: 1px solid var(--ink);
+    border: 1px solid var(--border);
     background: #ffffff;
     color: var(--ink);
     font-weight: 600;
@@ -938,7 +939,7 @@ button + .button {
     background: rgba(14,106,71,0.40);
     color: #000000;
     padding: .85rem 1rem;
-    margin: var(--space-4) 0 .75;
+    margin: var(--space-4) 0 .75rem;
 }
 /*review box*/
 .box-content--green10 {
