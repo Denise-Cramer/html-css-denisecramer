@@ -29,7 +29,7 @@
         <h1 class="product-hero__title">RED JACKET WOMAN</h1>
     </div>
  </section>
- 
+
 <main id="main" class="container">
     <!--product detail-->
     <section class="product-detail">
@@ -50,17 +50,22 @@
             <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
             <form class="add-to-cart" action="cart.html" method="get">
-                <!--hide label-->
-                <label class="visually-hidden" for="size">SIZE</label>
-                <select id="size" name="size" required>
-                    <option value="" disabled selected>SIZE</option>
-                    <option value="S">Small</option>
-                    <option value="M">Medium</option>
-                    <option value="L">Large</option>
-                </select>
+                <fieldset class="size-picker">
+                    <legend class="visually-hidden">Choose size</legend>
 
-                <input type="hidden" name="sku" value="RJ-W-RED">
-                <button class="button button--cta" type="submit">ADD TO CART</button>
+                    <!--radio buttons for sizes-->
+                    <input type="radio" id="size-s" name="size" value="S" required>
+                    <label for="size-s" class="size-button">S</label>
+
+                    <input type="radio" id="size-m" name="size" value="M" required>
+                    <label for="size-m" class="size-button">M</label>
+
+                    <input type="radio" id="size-l" name="size" value="L" required>
+                    <label for="size-l" class="size-button">L</label>
+                </fieldset>
+
+                <input type="hidden" name="sku" value="RJ-W-RED-01">
+                <button class="button button--cta" type="submit">Add to cart</button>
             </form>
         </div>
     </section>
