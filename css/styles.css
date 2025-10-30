@@ -732,3 +732,89 @@ button + .button {
 .hero--bg::before {
     content: none;
 }
+
+/*===Product page (Red jacket women)===*/
+
+/* two columns. stack on mobile*/
+.product-detail {
+    display: grid;
+    gap: var(--space-4);
+    align-items: start;
+    margin: var(--space-4) 0 var(--space-5);
+}
+.product-media img {
+    border-radius: var(--radius);
+}
+
+/*title and short description*/
+.product-title {
+    margin: 0 0 var(--space-2);
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+}
+.product-info .lead {
+    margin: 0 0 var(--space-3);
+    color: var(--muted-ink);
+    max-width: 60ch;
+}
+
+/*size and cta row*/
+.product-info .add-to-cart {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: var(--space-2);
+    align-items: end;
+    max-width: 420px;
+}
+.product-info .add-to-cart select {
+    padding: .6rem .8rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font: inherit;
+}
+
+/*side by side on wide screens*/
+@media (min-width: 900px) {
+    .product-detail {
+        grid-template-columns: 1.1fr 0.9fr;
+    }
+}
+
+/*detailded description*/
+.product-details .section-title {
+    text-align: left;
+    margin: var(--space-4) 0 var(--space-2);
+}
+.prose p {
+    margin: 0 0 var(--space-2);
+}
+
+/*reviews*/
+.product-reviews .section-title {
+    text-align: left;
+    margin: var(--space-5) 0 var(--space-3);
+}
+.reviews-grid {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--space-5);
+    display: grid;
+    gap: var(--space-3);
+}
+@media (min-width: 700px) {
+    .reviews-grid { grid-template-columns: repeat(3, minmax(0, 1fr));}
+}
+.review-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: var(--space-2);
+}
+.reviewer {
+    margin: 0 0 .25rem;
+    font-size: 1rem;
+}
+.review-text {
+    margin: 0;
+    color: var(--muted-ink);
+}
