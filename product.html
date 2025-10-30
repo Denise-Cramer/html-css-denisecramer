@@ -25,22 +25,26 @@
     </header> 
 
 <main id="main" class="container">
-    <!--image left, text right-->
-    <section class="product-detail" aria-labelledby="product-title">
+    <!--product detail-->
+    <section class="product-detail">
+        <!--product image to left-->
         <div class="product-media">
             <img
             src="assets/images/red-jacket-women.jpg"
             width="1200"
             height="1200"
-            alt="Slim fit red rainjacket for women">
+            alt="Slim fit red rainjacket for women"
+            loading="eager">
         </div>
 
+        <!--title, short description, size and cta-->
         <div class="product-info">
-            <h1 id="product-title" class="product-title"> RED JACKET<br><span class="subtitle">WOMAN</span></h1>
+            <h1 class="product-title">RED JACKET WOMEN</h1>
 
             <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
             <form class="add-to-cart" action="cart.html" method="get">
+                <!--hide label-->
                 <label class="visually-hidden" for="size">SIZE</label>
                 <select id="size" name="size" required>
                     <option value="" disabled selected>SIZE</option>
@@ -48,6 +52,9 @@
                     <option value="M">Medium</option>
                     <option value="L">Large</option>
                 </select>
+
+                <input type="hidden" name="sku" value="RJ-W-RED">
+                <button class="button button--cta" type="submit">ADD TO CART</button>
             </form>
         </div>
     </section>

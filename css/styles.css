@@ -744,13 +744,17 @@ button + .button {
 }
 .product-media img {
     border-radius: var(--radius);
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 /*title and short description*/
 .product-title {
     margin: 0 0 var(--space-2);
-    line-height: 1.1;
+    line-height: 1.05;
     letter-spacing: 0.02em;
+    text-transform: uppercase;
 }
 .product-info .lead {
     margin: 0 0 var(--space-3);
@@ -773,7 +777,7 @@ button + .button {
     font: inherit;
 }
 
-/*side by side on wide screens*/
+/*side by side on big screens*/
 @media (min-width: 900px) {
     .product-detail {
         grid-template-columns: 1.1fr 0.9fr;
