@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rainy Days - Red jacket woman</title>
+    <title>Rainy Days - Red jacket women</title>
     <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -25,8 +25,52 @@
     </header> 
 
 <main id="main" class="container">
-    <h1>Red jacket woman</h1>
-    <!--specific content will go here later-->
+    <!--image left, text right-->
+    <section class="product-detail" aria-labelledby="product-title">
+        <div class="product-media">
+            <img
+            src="assets/images/red-jacket-women.jpg"
+            width="1200"
+            height="1200"
+            alt="Slim fit red rainjacket for women">
+        </div>
+
+        <div class="product-info">
+            <h1 id="product-title" class="product-title"> RED JACKET<br><span class="subtitle">WOMAN</span></h1>
+
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+            <form class="add-to-cart" action="cart.html" method="get">
+                <label class="visually-hidden" for="size">SIZE</label>
+                <select id="size" name="size" required>
+                    <option value="" disabled selected>SIZE</option>
+                    <option value="S">Small</option>
+                    <option value="M">Medium</option>
+                    <option value="L">Large</option>
+                </select>
+            </form>
+        </div>
+    </section>
+
+    <!--customer reviews section-->
+    <section class="product-reviews" aria-labelledby="reviews-title">
+        <h2 id="reviews-title" class="section-title">Customer reviews</h2>
+
+        <ul class="reviews-grid">
+            <li class="review-card">
+                <h3 class="reviewer">Customer 1</h3>
+                <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>   
+            </li>
+            <li class="review-card">
+                <h3 class="reviewer">Customer 2</h3>
+                <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </li>
+            <li class="review-card">
+                <h3 class="reviewer">Customer 3</h3>
+                <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </li>
+        </ul>
+    </section>
     </main>
     <footer role="contentinfo">
         <div class="container footer-inner">
