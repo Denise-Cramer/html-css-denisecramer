@@ -52,7 +52,7 @@
                         <label for="country-region">Country/Region</label>
                         <input id="country-region" name="country_region" type="text" autocomplete="country" required>
                     </div>
-                    <div class="form-field">
+                    <div class="form-field form-field--wide">
                         <label for="address1">Street address</label>
                         <input id="address1" name="address1" type="text" autocomplete="address-line1" required>
                     </div>
@@ -79,15 +79,16 @@
         <a class="button button--cta" href="confirmation.html">PAY</a>
     </div>
     <!--Right: summary + payment-->
-    <aside class="panel checkout__summary" aria-labelledby="sum-title">
-        <h2 id="sum-title" class="panel__title">Order summary</h2>
-        <dl class="summary-rows">
-            <div class="row"><dt>Subtotal (3 items)</dt><dd>5 452,50 SEK</dd></div>
-            <div class="row"><dt>VAT</dt><dd>1 817,50 SEK</dd></div>
-            <div class="row"><dt>Shipping</dt><dd>Free shipping</dd></div>
-            <div class="row"><dt>Total</dt><dd>7 270 SEK</dd></div>
-        </dl>
-    </aside>
+    <aside class="checkout__side">
+        <div class="panel checkout__summary" aria-labelledby="sum-title">
+            <h2 id="sum-title" class="panel__title">Order summary</h2>
+            <dl class="summary-rows">
+             <div class="row"><dt>Subtotal (3 items)</dt><dd>5 452,50 SEK</dd></div>
+             <div class="row"><dt>VAT</dt><dd>1 817,50 SEK</dd></div>
+             <div class="row"><dt>Shipping</dt><dd>Free shipping</dd></div>
+             <div class="row"><dt>Total</dt><dd>7 270 SEK</dd></div>
+            </dl>
+        </div>
     <!--Payment details-->
     <section class="panel" aria-labelledby="pay-title">
         <h2 id="pay-title" class="panel__title">Payment details</h2>
@@ -110,6 +111,7 @@
             </div>
         </form>
     </section>
+</aside>
     </main>
     <footer role="contentinfo">
         <div class="container footer-inner">
