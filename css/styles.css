@@ -1241,3 +1241,43 @@ button + .button {
 .summary-rows .total dt, .summary-rows .total dd {
     font-weight: 700;
 }
+/*--Checkout left and right column layout--*/
+.checkout {
+    display: grid;
+    gap: var(--space-4);
+    margin: var(--space-4) 0 var(--space-5);
+    align-items: start;
+}
+
+/*Checkout desktop two cols*/
+@media (min-width: 960px) {
+    .checkout {
+        grid-template-columns: minmax(1.2fr, 0) minmax(1fr, 320px);
+        gap: var(--space-5);
+    }
+}
+/*Left colum width*/
+.checkout__forms {
+    max-width: 720px;
+}
+/*Right side, stacked Order + payment*/
+.checkout__side {
+    display: grid;
+    gap: var(--space-3);
+    align-content: start;
+}
+/*Summary visibility scrolling*/
+.checkout__summary {
+    position: sticky;
+    top: var(--space-3);
+}
+/*tidy summary rows*/
+.summary-rows .row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: var(--space-2);
+    padding: .4rem 0;
+}
+.summary-rows .total dt, .summary-rows .total dd {
+    font-weight: 700;
+}
