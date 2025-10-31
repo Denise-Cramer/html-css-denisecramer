@@ -83,6 +83,9 @@ header[role="banner"] {
     border-bottom: 1px solid rgba(255, 255, 255, .08);
     padding: var(--space-2) 0;
 }
+.site-header {
+    background: var(--header-bg);
+}
 .header-inner {
     display: flex;
     align-items: center;
@@ -94,6 +97,20 @@ header[role="banner"] {
     font-size: 1.5rem;
     text-decoration: none;
     color: var(--brand-ink);
+}
+/*logo image size*/
+.logo {
+    display: inline-flex;
+    align-items: center;
+}
+.logo img{
+    height: 36px;
+    width: auto;
+    display: block;
+}
+/*invert logo on dark bg*/
+.logo.logo--invert img {
+    filter: brightness(0) invert(1);
 }
 .nav {
     list-style: none;
