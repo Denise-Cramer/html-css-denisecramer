@@ -1159,3 +1159,16 @@ button + .button {
     white-space: nowrap;
     border: 0;
 }
+/*===Payment and checkout===*/
+.checkout {
+    display: grid;
+    gap: var(--space-4);
+    margin: var(--space-4) 0 var(--space-5);
+    align-items: start;
+}
+/*two columns 960px*/
+@media (min-width: 960px) {
+    .checkout {
+        grid-template-columns: 1.6fr 1fr; /*forms*/
+    }
+}
