@@ -1172,3 +1172,72 @@ button + .button {
         grid-template-columns: 1.6fr 1fr; /*forms*/
     }
 }
+/*card*/
+.panel {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: var(--space-3);
+}
+.panel__title {
+    margin: 0 0 var(--space-2);
+}
+/*grid with 2 cols on desktop mode*/
+.form-grid {
+    display: grid;
+    gap: var(--space-2);
+}
+@media (min-width: 720px) {
+    .form-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.form-field {
+    display: grid;
+    gap: .5rem;
+}
+.form-field--wide {
+    grid-column: 1 / -1;
+}
+.form-field input, .form-field select {
+    padding: .75rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font: inherit;
+    background: var(--bg);
+    color: var(--ink);
+}
+.form-field input:focus, .form-field select:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 91, 187, 0.35);
+    border-color: var(--accent);
+}
+/*below forms*/
+.checkout__actions {
+    display: grid;
+    gap: var(--space-2);
+    margin-top: var(--space-3);
+}
+@media (min-width: 480px) {
+    .checkout__actions {
+        grid-auto-flow: column;
+        justify-content: start;
+    }
+}
+/*summary card*/
+.checkout__summary {
+    position: sticky;
+    top: var(--space-3);
+}
+.summary-rows {
+    margin: 0;
+}
+.summary-rows .row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: var(--space-2);
+    padding: .4rem 0;
+}
+.summary-rows .total dt, .summary-rows .total dd {
+    font-weight: 700;
+}
