@@ -225,10 +225,10 @@ header[role="banner"] {
         min-height: auto;
         padding: var(--space-4);
     }
+}
     .footer-logo img {
         width: 180px;
     }
-}
 
 /*===End of main and footer==*/
 
