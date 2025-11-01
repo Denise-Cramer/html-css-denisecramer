@@ -143,7 +143,7 @@ main {
     padding: var(--space-3) 0;
     font-size: 0.95rem;
 }
-/*Footer layou logo*/
+/*Footer layout logo*/
 .site-footer {
     background: var(--footer-bg);
     color: var(--brand-ink);
@@ -194,7 +194,7 @@ main {
     }
 }
 
-/*===Footer grid and info===*/
+/*Footer grid and info*/
 .footer-inner {
     display: grid;
     grid-template-columns: 1fr;
