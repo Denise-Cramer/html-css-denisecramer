@@ -152,10 +152,9 @@ main {
     display: flex;
     align-items: center;
 }
-.footer-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.site-footer .footer-inner {
+    display: grid;
+    grid-template-columns: 1fr;
     gap: var(--space-3);
     width: 100%;
 }
