@@ -133,7 +133,7 @@ header[role="banner"] {
 }
 
 /*===main and footer===*/
-.main {
+main {
     padding: var(--space-3) 0;
 }
 
@@ -148,7 +148,7 @@ header[role="banner"] {
 }
 
 /* footer grid: 1 col mobile, 2 cols tablet, 5 cols dekstop */
-.site-footer .footer-inner {
+.site-footer .footer-meta {
     display: grid;
     grid-template-columns: 1fr;     /*stack on mobile*/
     gap: var(--space-4);
@@ -156,7 +156,7 @@ header[role="banner"] {
 }
 
 @media (min-width: 900px) {
-    .site-footer .footer-inner {
+    .site-footer .footer-meta {
         grid-template-columns: auto 1fr; /* logo and columns*/
         align-items: start;
     }
