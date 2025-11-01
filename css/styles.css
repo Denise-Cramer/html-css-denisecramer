@@ -194,6 +194,61 @@ main {
     }
 }
 
+/*===Footer grid and info===*/
+.footer-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+    width: 100%;
+}
+/*mobile*/
+@media (min-width: 600px) {
+    .footer-inner {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+}
+.footer-grid {
+    display: grid;
+    gap: var(--space-3);
+}
+/*desktop*/
+@media (min-width: 900px) {
+.footer-inner {
+    grid-template-columns: 1.3fr 1fr 1fr 1fr 1.2fr;
+    gap: var(--space-4);
+    }
+}
+
+/* Titles, white and bold */
+.footer-title {
+    margin: 0 0 .5rem;
+    color: var(--brand-ink);
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+/* Link style */
+.footer-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.footer-list a {
+    color: var(--brand-ink);
+    text-decoration: none;
+}
+.footer-list a:hover, .footer-list a:focus-visible {
+    text-decoration: underline;
+}
+/*Logo size*/
+.footer-logo img {
+    width: 232px;
+    height: auto;
+    display: block;
+}
+/*=== End of footer===*/
+
 /*---headings---*/
 h1 {
     font-size: clamp(1.6rem, 4vw, 2.2rem);
