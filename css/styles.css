@@ -133,7 +133,7 @@ header[role="banner"] {
 }
 
 /*===main and footer===*/
-main {
+.main {
     padding: var(--space-3) 0;
 }
 
@@ -150,7 +150,7 @@ main {
 .site-footer .footer-inner {
     display: grid;
     grid-template-columns: 1fr;     /*stack on mobile*/
-    grid-area: var(--space-3);
+    gap: var(--space-3);
     width: 100%;
 }
 
@@ -211,7 +211,7 @@ main {
 
 /* Mobile */
 @media (max-width: 600px) {
-    site.footer {
+    .site.footer {
         min-height: auto;
         padding: var(--space-4);
     }
