@@ -230,6 +230,55 @@ main {
         width: 180px;
     }
 
+/*test for aligning footer*/
+.site-footer--simple {
+    background: var(--footer-bg);
+    color: var(--brand-ink);
+    padding: var(--space-5) 0;
+}
+
+.footer-simple {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+}
+
+/*desktop: logo and 4 cols*/
+@media (min-width: 900px) {
+    .footer-simple {
+        grid-template-columns: auto 1fr 1fr 1fr 1fr;
+        align-items: start;
+        gap: var(--space-5);
+    }
+}
+
+/*columns*/
+.fs-col {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+.fs-title {
+    margin: 0 0 .5rem;
+    font-weight: 700;
+    color: var(--brand-ink);
+    font-size: 1.05rem;
+}
+
+/*logo*/
+.fs-logo img {
+    display: block;
+    width: 232px;
+    height: auto;
+    filter: brightness(0) invert(1);
+}
+
+/*mobile layout*/
+@media (max-width: 599px) {
+    .fs-logo img {
+        width: 180px;
+    }
+}
+
 /*===End of main and footer==*/
 
 /*---headings---*/
