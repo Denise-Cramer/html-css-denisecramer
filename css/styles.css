@@ -1326,6 +1326,11 @@ button + .button {
     border: 0;
 }
 /*===Payment and checkout===*/
+.page-title--center {
+    text-align: center;
+    margin-bottom: var(--space-3);
+}
+
 .checkout {
     display: grid;
     gap: var(--space-4);
@@ -1336,8 +1341,10 @@ button + .button {
 @media (min-width: 960px) {
     .checkout {
         grid-template-columns: 1.6fr 1fr; /*forms*/
+        gap: var(--space-5);
     }
 }
+
 /*card*/
 .panel {
     background: var(--bg);
