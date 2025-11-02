@@ -76,31 +76,31 @@
                 <form class="form-grid" action="confirmation.html" method="get">
                     <div class="form-field">
                         <label for="first-name">First name</label>
-                        <input id="first-name" name="first_name" type="text" autocomplete="given-name" required>
+                        <input id="first-name" name="first_name" type="text" autocomplete="given-name">
                     </div>
                     <div class="form-field">
                         <label for="last-name">Last name</label>
-                        <input id="last-name" name="last_name" type="text" autocomplete="given-name" required>
+                        <input id="last-name" name="last_name" type="text" autocomplete="given-name">
                     </div>
                     <div class="form-field">
                         <label for="country-region">Country/Region</label>
-                        <input id="country-region" name="country_region" type="text" autocomplete="country" required>
+                        <input id="country-region" name="country_region" type="text" autocomplete="country">
                     </div>
                     <div class="form-field form-field--wide">
                         <label for="address1">Street address</label>
-                        <input id="address1" name="address1" type="text" autocomplete="address-line1" required>
+                        <input id="address1" name="address1" type="text" autocomplete="address-line1">
                     </div>
                     <div class="form-field">
                         <label for="address2">House/apartment number</label>
-                        <input id="address2" name="address2" type="text" autocomplete="address-line2" required>
+                        <input id="address2" name="address2" type="text" autocomplete="address-line2">
                     </div>
                     <div class="form-field">
                         <label for="postal">Postal code</label>
-                        <input id="postal" name="postal_code" type="text" inputmode="numeric" autocomplete="postal-code" required>
+                        <input id="postal" name="postal_code" type="text" inputmode="numeric" autocomplete="postal-code">
                     </div>
                     <div class="form-field">
                         <label for="city">City</label>
-                        <input id="city" name="city" type="text" autocomplete="address-level2" required>
+                        <input id="city" name="city" type="text" autocomplete="address-level2">
                     </div>
                 </form>
             </section>
@@ -121,22 +121,22 @@
             <!--Payment details-->
             <section class="panel" aria-labelledby="pay-title">
                 <h2 id="pay-title" class="panel__title">Payment details</h2>
-                <form class="form-grid" action="confirmation.html" method="get">
+                <form class="form-grid" action="confirmation.html" method="get" novalidate>
                     <div class="form-field form-field--wide">
                         <label for="card-name">Name on card</label>
-                        <input id="card-name" name="card_name" type="text" autocomplete="cc-name" required>
+                        <input id="card-name" name="card_name" type="text" autocomplete="cc-name">
                     </div>
                     <div class="form-field form-field--wide">
                         <label for="card-number">Card number</label>
-                        <input id="card-number" name="card_number" type="text" inputmode="numeric" autocomplete="cc-number" placeholder="1234 5678 1234 5678" required>
+                        <input id="card-number" name="card_number" type="text" inputmode="numeric" autocomplete="cc-number" placeholder="1234 5678 1234 5678">
                     </div>
                     <div class="form-field">
                         <label for="exp">Expiration date</label>
-                        <input id="exp" name="exp" type="text" inputmode="numeric" autocomplete="cc-exp" placeholder="MM/YY" required>
+                        <input id="exp" name="exp" type="text" inputmode="numeric" autocomplete="cc-exp" placeholder="MM/YY">
                     </div>
                     <div class="form-field">
                         <label for="cvv">CVV/Security code</label>
-                        <input id="cvv" name="cvv" type="text" inputmode="numeric" autocomplete="cc-csc" placeholder="123" required>
+                        <input id="cvv" name="cvv" type="text" inputmode="numeric" autocomplete="cc-csc" placeholder="123">
                     </div>
 
                     <!--CTA-->
