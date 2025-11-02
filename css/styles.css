@@ -365,7 +365,11 @@ body {
     height: auto;
     display: block;
 }
-
+ /*no padding between hero and header*/
+ .main--no-top {
+    padding-top: 0;
+ }
+ 
 /*ghost button variant*/
 .button.button--ghost {
     background-color: transparent;
