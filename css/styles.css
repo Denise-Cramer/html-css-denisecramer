@@ -369,7 +369,15 @@ body {
  .main--no-top {
     padding-top: 0;
  }
- 
+
+ /*Hero homepage: white text*/
+ .hero--bg, .hero--bg .hero-content, .hero--bg h1, .hero--bg .lead {
+    color: var(--brand-ink);
+ }
+ .hero--bg a:not(.button) {
+    color: var(--brand-ink);
+ }
+
 /*ghost button variant*/
 .button.button--ghost {
     background-color: transparent;
