@@ -60,7 +60,7 @@
     <!--Hero-->
     <section class="checkout-hero">
         <div class="container hero-wrap">
-            <h1 class="checkout-hero__title"></h1>
+            <h1 class="checkout-hero__title">CHECKOUT</h1>
         </div>
     </section>
 
@@ -105,47 +105,50 @@
                 </form>
             </section>
         </div>
-    </section>
 
-    <!--Checkout actions-->
+        <!--Right: summary + payment-->
+         <aside class="checkout__side">
+            <section class="panel checkout__summary" aria-labelledby="sum-title">
+                <h2 id="sum-title" class="panel__title">Order summary</h2>
+                <dl class="summary-rows">
+                <div class="row"><dt>Subtotal (3 items)</dt><dd>5 452,50 SEK</dd></div>
+                <div class="row"><dt>VAT</dt><dd>1 817,50 SEK</dd></div>
+                 <div class="row"><dt>Shipping</dt><dd>Free shipping</dd></div>
+                <div class="row"><dt>Total</dt><dd>7 270 SEK</dd></div>
+                </dl>
+            </section>
+
+            <!--Payment details-->
+            <section class="panel" aria-labelledby="pay-title">
+                <h2 id="pay-title" class="panel__title">Payment details</h2>
+                <form class="form-grid" action="confirmation.html" method="get">
+                    <div class="form-field form-field--wide">
+                        <label for="card-name">Name on card</label>
+                        <input id="card-name" name="card_name" type="text" autocomplete="cc-name" required>
+                    </div>
+                    <div class="form-field form-field--wide">
+                        <label for="card-number">Card number</label>
+                        <input id="card-number" name="card_number" type="text" inputmode="numeric" autocomplete="cc-number" placeholder="1234 5678 1234 5678" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="exp">Expiration date</label>
+                        <input id="exp" name="exp" type="text" inputmode="numeric" autocomplete="cc-exp" placeholder="MM/YY" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="cvv">CVV/Security code</label>
+                        <input id="cvv" name="cvv" type="text" inputmode="numeric" autocomplete="cc-csc" placeholder="123" required>
+                    </div>
+
+                    <!--CTA-->
+                    <button class="button button--cta checkout__paybtn" type="submit">PAY</button>
+                </form>
+            </section>
+        </aside>
+    </section>
+    <!--Continue shopping-->
     <div class="checkout__actions">
         <a class="button button--ghost" href="cart.html">Shopping cart</a>
-        <a class="button button--cta" href="confirmation.html">PAY</a>
     </div>
-    <!--Right: summary + payment-->
-    <aside class="checkout__side">
-        <div class="panel checkout__summary" aria-labelledby="sum-title">
-            <h2 id="sum-title" class="panel__title">Order summary</h2>
-            <dl class="summary-rows">
-             <div class="row"><dt>Subtotal (3 items)</dt><dd>5 452,50 SEK</dd></div>
-             <div class="row"><dt>VAT</dt><dd>1 817,50 SEK</dd></div>
-             <div class="row"><dt>Shipping</dt><dd>Free shipping</dd></div>
-             <div class="row"><dt>Total</dt><dd>7 270 SEK</dd></div>
-            </dl>
-        </div>
-    <!--Payment details-->
-    <section class="panel" aria-labelledby="pay-title">
-        <h2 id="pay-title" class="panel__title">Payment details</h2>
-        <form class="form-grid" action="confirmation.html" method="get">
-            <div class="form-field form-field--wide">
-                <label for="card-name">Name on card</label>
-                <input id="card-name" name="card_name" type="text" autocomplete="cc-name" required>
-            </div>
-            <div class="form-field form-field--wide">
-                <label for="card-number">Card number</label>
-                <input id="card-number" name="card_number" type="text" inputmode="numeric" autocomplete="cc-number" placeholder="1234 5678 1234 5678" required>
-            </div>
-            <div class="form-field">
-                <label for="exp">Expiration date</label>
-                <input id="exp" name="exp" type="text" inputmode="numeric" autocomplete="cc-exp" placeholder="MM/YY" required>
-            </div>
-            <div class="form-field">
-                <label for="cvv">CVV/Security code</label>
-                <input id="cvv" name="cvv" type="text" inputmode="numeric" autocomplete="cc-csc" placeholder="123" required>
-            </div>
-        </form>
-    </section>
-    </aside>
 </main>
     <footer role="contentinfo" class="site-footer--simple">
         <div class="container footer-simple">
