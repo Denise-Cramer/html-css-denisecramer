@@ -1635,3 +1635,14 @@ button + .button {
     opacity: .95;
 }
 /*===End of About us section===*/
+
+/*center Homepage sections*/
+.home-categories, .home-about, .home-products {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--max-width);
+}
+/*centered heading*/
+.home-categories .section-title, .home-about .section-title, .home-products .section-title {
+    text-align: center;
+}
