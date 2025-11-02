@@ -589,51 +589,6 @@ button + .button {
     border-color: var(--brand);
 }
 
-/*===About us/Rainy Days, full image section===*/
-.about-full {
-    background-image: url('../assets/images/about-us-bg.jpg');
-    background-size: cover;
-    background-position: center;
-
-    position: relative;
-    overflow: hidden;
-    padding: clamp(3rem, 8vw, 6rem) 0;
-    color: var(--brand-ink); /*image text*/
-}
-
-/*overlay for readability*/
-.about-full::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: var(--ink);
-    z-index: 0;
-}
-
-.about-full__inner {
-    position: relative;
-    text-align: center;
-    max-width: 900px;
-    z-index: 1;
-    margin-inline: auto;
-}
-
-.about-full__title {
-    margin: 0 0 1rem;
-    font-size: clamp(1.8rem, 4.5vw, 2.6rem);
-    font-weight: 800;
-    letter-spacing: .02em;
-}
-
-.about-full__text {
-    margin: 0 auto;
-    max-width: 65ch;
-    font-size: clamp(1rem, 2.2vw, 1.125rem);
-    line-height: 1.6;
-    opacity: .95;
-}
-/*===End of About us section===*/
-
 /*=== Newsletter section===*/
 .newsletter {
     background-color: var(--surface);
@@ -1622,3 +1577,48 @@ button + .button {
         width: 52vw;
     }
 }
+
+/*===About us/Rainy Days, full image section===*/
+.about-full {
+    background-image: url('../assets/images/about-us-bg.jpg');
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+    overflow: hidden;
+    padding: clamp(3rem, 8vw, 6rem) 0;
+    color: var(--brand-ink); /*image text*/
+}
+
+/*overlay for readability*/
+.about-full::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--ink);
+    z-index: 0;
+}
+
+.about-full__inner {
+    position: relative;
+    text-align: center;
+    max-width: 900px;
+    z-index: 1;
+    margin-inline: auto;
+}
+
+.about-full__title {
+    margin: 0 0 1rem;
+    font-size: clamp(1.8rem, 4.5vw, 2.6rem);
+    font-weight: 800;
+    letter-spacing: .02em;
+}
+
+.about-full__text {
+    margin: 0 auto;
+    max-width: 65ch;
+    font-size: clamp(1rem, 2.2vw, 1.125rem);
+    line-height: 1.6;
+    opacity: .95;
+}
+/*===End of About us section===*/
