@@ -596,6 +596,7 @@ button + .button {
     background-position: center;
 
     position: relative;
+    overflow: hidden;
     padding: clamp(3rem, 8vw, 6rem) 0;
     color: var(--brand-ink); /*image text*/
 }
@@ -606,19 +607,21 @@ button + .button {
     position: absolute;
     inset: 0;
     background: var(--ink);
+    z-index: 0;
 }
 
 .about-full__inner {
     position: relative;
     text-align: center;
     max-width: 900px;
+    z-index: 1;
+    margin-inline: auto;
 }
 
 .about-full__title {
     margin: 0 0 1rem;
     font-size: clamp(1.8rem, 4.5vw, 2.6rem);
     font-weight: 800;
-    text-transform: none;
     letter-spacing: .02em;
 }
 
