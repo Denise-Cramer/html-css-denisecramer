@@ -5,6 +5,7 @@ Rainy Days is an e-commerce website for outdoor jackets designed for men and wom
 
 ## Built with:
 
+- HTML
 - CSS
 - Figma
 - GitHub
