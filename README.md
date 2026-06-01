@@ -1,7 +1,7 @@
 # Rainy Days
 ## Description
 
-Rainy Days is an e-commerce webiste for outdoor jackets designed for men and women who enjoy outdoor activities in all weather. This websites allows it's visitors to browse products, view detailed information about the products, and explore a modern shopping experience.
+Rainy Days is an e-commerce website for outdoor jackets designed for men and women who enjoy outdoor activities in all weather. This website allows its visitors to browse products, view detailed information about the products, and explore a modern shopping experience.
 
 ## Built with:
 -HTML
@@ -11,10 +11,10 @@ GitHub
 
 ## Features:
 
-- Respponcive design
+- Responsive design
 - Product listing pages
 - Product detail pages
-- Accessible nagivation
+- Accessible navigation
 - A modern e-commerce layout
 
 ## Live demo:
@@ -23,8 +23,8 @@ GitHub
 
 ## Figma design:
 
-[Figma Desktop](https://www.figma.com/proto/XfwpGmXMgiDvFA8mBJsIvP/Rainydays-Website?node-id=0-1&t=TqyKdO5lPcHHbuW5-1)
-[Figma Mobile](https://www.figma.com/proto/CMs43ms9WxIZoj5MC8qZws/Rainydays-Mobile?t=TqyKdO5lPcHHbuW5-1)
+- [Figma Desktop](https://www.figma.com/proto/XfwpGmXMgiDvFA8mBJsIvP/Rainydays-Website?node-id=0-1&t=TqyKdO5lPcHHbuW5-1)
+- [Figma Mobile](https://www.figma.com/proto/CMs43ms9WxIZoj5MC8qZws/Rainydays-Mobile?t=TqyKdO5lPcHHbuW5-1)
 
 ## Repository
 
